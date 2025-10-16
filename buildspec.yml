@@ -22,4 +22,6 @@ phases:
 artifacts:
   files:
     - Web-Project/target/*.war
+    - appspec.yml
+    - Web-Project/scripts/**/*
   discard-paths: no
