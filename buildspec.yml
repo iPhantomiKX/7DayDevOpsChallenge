@@ -16,7 +16,6 @@ phases:
       - mvn clean install -s settings.xml
   post_build:
     commands:
-      - cd Web-Project
       - echo Build completed on `date`
       - echo Packaging artifacts...
       - mvn package -s settings.xml
