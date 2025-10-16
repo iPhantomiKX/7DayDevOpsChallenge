@@ -11,13 +11,15 @@ phases:
       - export CODEARTIFACT_AUTH_TOKEN
   build:
     commands:
+      - cd Web-Project
       - echo Build started on `date`
-      - mvn clean install -s Web-Project/settings.xml
+      - mvn clean install -s settings.xml
   post_build:
     commands:
+      - cd Web-Project
       - echo Build completed on `date`
       - echo Packaging artifacts...
-      - mvn package -s Web-Project/settings.xml
+      - mvn package -s settings.xml
 artifacts:
   files:
     - target/*.war
